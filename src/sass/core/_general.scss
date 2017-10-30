@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  cursor: url(../img/eye.png), url(cursor.cur), pointer;
+}
+
+.container {
+    width: 100%;
+    max-width: 1665px;
+    margin: 0 auto;
+}

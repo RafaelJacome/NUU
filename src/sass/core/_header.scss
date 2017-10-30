@@ -1,0 +1,24 @@
+header {
+    position: fixed;
+    width: 100%;
+    padding: 40px 40px;
+    .logo {
+        display: block;
+        float: left;
+        img {
+            width:85px;
+            height: auto;
+            max-height: 30px;
+        }
+    }
+    .arrow {
+        display: block;
+        float: right;
+        img {
+            width: 30px;
+            height: auto;
+            max-height: 22px;
+            
+        }
+    }
+}

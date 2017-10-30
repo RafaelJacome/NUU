@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Tungsten-Bold';
+  src: url('../fonts/Tungsten-Bold.eot');
+  src: url('../fonts/Tungsten-Bold.woff2') format('woff2'),
+       url('../fonts/Tungsten-Bold.woff') format('woff'),
+       url('../fonts/Tungsten-Bold.ttf') format('truetype'),
+       url('../fonts/Tungsten-Bold.svg#Tungsten-Bold') format('svg'),
+       url('../fonts/Tungsten-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Apercu-Mono';
+  src: url('../fonts/Apercu-Mono.woff') format('woff'),
+       url('../fonts/Apercu-Mono.ttf') format('truetype'),
+       url('../fonts/Apercu-Mono.svg#Apercu-Mono') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'apercu-mono-webfont';
+  src: url('../fonts/apercu-mono-webfont.eot');
+  src: url('../fonts/apercu-mono-webfont.woff2') format('woff2'),
+       url('../fonts/apercu-mono-webfont.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fabriga-Regular';
+  src: url('../fonts/Fabriga-Regular.eot');
+  src: url('../fonts/Fabriga-Regular.woff2') format('woff2'),
+       url('../fonts/Fabriga-Regular.woff') format('woff'),
+       url('../fonts/Fabriga-Regular.ttf') format('truetype'),
+       url('../fonts/Fabriga-Regular.svg#Fabriga-Regular') format('svg'),
+       url('../fonts/Fabriga-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font1: 'Tungsten-Bold';
+$font2: 'Fabriga-Regular';
+$font3: 'Apercu-Mono';

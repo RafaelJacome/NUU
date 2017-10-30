@@ -1,0 +1,15 @@
+# Dependency directories
+node_modules
+jspm_packages
+bower_components
+
+# Generated files
+dist
+
+# Optional npm cache directory
+.npm
+
+### macOS ###
+*.DS_Store
+.AppleDouble
+.LSOverride

@@ -1,0 +1,29 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    .container  {
+        a {
+            font-family: $font3;
+            font-size: 15px;
+            padding: 1px 15px;
+            border-right: 1px solid #000000;
+            color: #000000;
+            display: inline-block;
+            &:first-child {
+                padding-left: 0px;
+            }
+            &:last-child {
+                border-radius: none;
+            }
+        }
+
+        p {
+            float: right;
+            font-family: $font3;
+            font-size: 15px;
+            color: #000000;
+        }
+    }
+}
