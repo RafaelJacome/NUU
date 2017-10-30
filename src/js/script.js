@@ -82,7 +82,6 @@ let changeColors = () => {
     }  
 }
 
- 
 
 (() => {
     let initEvents = () =>  {
