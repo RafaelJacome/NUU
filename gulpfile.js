@@ -43,6 +43,11 @@ gulp.task('img', function () {
     .pipe(gulp.dest('dist/img'));
 });
 
+gulp.task('fonts', function () {
+  return gulp.src('src/fonts/**/*')
+    .pipe(gulp.dest('dist/fonts'));
+});
+
 gulp.task('serve', ['css', 'js'], function(){
   browserSync.init(['dist/css/*.css', 'dist/js/*.js', '*.html'],{
     server: {
@@ -58,4 +63,4 @@ gulp.task('watch', ['serve'], function () {
   gulp.watch('./awesomeplate.config.json', [ 'css', 'js' ]);
 });
 
-gulp.task('default', ['css', 'js', 'img']);
+gulp.task('default', ['css', 'js', 'img', 'fonts']);
