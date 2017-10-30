@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "browser-sync": "^2.18.12",
-    "bulma": "^0.6.0"
+    "bulma": "^0.6.0",
+    "node-static": "^0.7.10"
   }
 }
