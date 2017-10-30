@@ -1,15 +1,90 @@
-.fullSection {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+body {
+    .fullSection {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 60px 0;
+        border: none;
+        outline: none;
+        transition: all 1.5s;
+        h1,
+        p,
+        span,
+        a {
+            transition: all 1.5s;
+        }
+    }
+    &.white {
+        .fullSection {
+            background: #ffffff;
+        }
+        h1,p {
+            color: #0000ff;
+        }
+        svg {
+            fill: #000000;
+        }
+    }
+    &.black {
+        .fullSection {
+            background: #000000;
+        }
+        h1,p {
+            color: #ffffff;
+        }
+        svg {
+            fill: #ffffff;
+        }
+        footer {
+            a{
+                color: #ffffff;
+                border-right: 1px solid #ffffff;
+            }
+            p {
+                color:#ffffff;
+            }
+        }
+    }
+    &.blue {
+        .fullSection {
+            background: #0000ff;
+        }
+        h1,p {
+            color: #ffffff;
+        }
+        svg {
+            fill: #ffffff;
+        }
+        footer {
+            a{
+                color: #ffffff;
+                border-right: 1px solid #ffffff;
+            }
+            p {
+                color:#ffffff;
+            }
+        }
+    }
+
+    &.white2 {
+        .fullSection {
+            background: #ffffff;
+        }
+        h1,p {
+            color: #000000;
+        }
+        svg {
+            fill: #000000;
+        }
+    }
 }
+
 
 .one {
     .container {
         h1 {
             font-size: 150px;
             line-height: 150px;
-            color: #0000FF;
             font-family: $font1;
             text-transform: uppercase;
         }
@@ -18,31 +93,26 @@
 
 
 .two {
-    background: #000000;
     .container {
         h1 {
             font-size: 116px;
-            line-height: 150px;
-            color: #fff;
+            line-height: 100px;
             font-family: $font1;
             text-transform: uppercase;
         }
         p {
             font-family: $font2;
             font-size: 25px;
-            color: #ffffff;
         }
     }
 }
 
 
 .three {
-    background: #0000FF;
     .container {
         h1 {
             font-size: 150px;
             line-height: 150px;
-            color: #FFFFFF;
             font-family: $font1;
             text-transform: uppercase;
         }
@@ -50,12 +120,10 @@
 }
 
 .four {
-    background: #000000;
     .container {
         p {
             font-family: $font2;
             font-size: 40px;
-            color: #fff;
             max-width: 1125px;
             margin: 0 auto;
             text-align: center;
@@ -68,14 +136,13 @@
         h1 {
             font-size: 150px;
             line-height: 150px;
-            color: #000000;
             font-family: $font1;
             text-transform: uppercase;
         }
         p {
             font-size: 24px;
             font-family: $font3;
-            color: #000000;
+            text-align: left;
             span {
                 text-decoration:line-through;
             }

@@ -6,11 +6,32 @@
 body {
   margin: 0;
   padding: 0;
-  cursor: url(../img/eye.png), url(cursor.cur), pointer;
+  cursor: url(../img/eye.png), pointer;
+
+  header,
+  main,
+  footer {
+    transition: all 0.4s;
+  }
+  &.menu-open {
+    header,
+    main,
+    footer {
+      opacity: 0.5;
+    }
+  }
 }
 
 .container {
     width: 100%;
     max-width: 1665px;
     margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+  transition: all 0.3s;
+  &:hover {
+    cursor: url(../img/eye-hover.png), pointer;
+  }
 }

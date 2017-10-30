@@ -2,7 +2,8 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding: 20px 0;
+    padding: 20px 0px;
+    z-index: 999;
     .container  {
         a {
             font-family: $font3;
@@ -14,8 +15,8 @@ footer {
             &:first-child {
                 padding-left: 0px;
             }
-            &:last-child {
-                border-radius: none;
+            &.last {
+                border-right: none !important;
             }
         }
 

@@ -1,11 +1,12 @@
 header {
     position: fixed;
+    z-index: 999;
     width: 100%;
-    padding: 40px 40px;
+    padding: 30px 0px;
     .logo {
         display: block;
         float: left;
-        img {
+        svg {
             width:85px;
             height: auto;
             max-height: 30px;
@@ -14,11 +15,12 @@ header {
     .arrow {
         display: block;
         float: right;
-        img {
-            width: 30px;
-            height: auto;
-            max-height: 22px;
-            
+        padding: 10px 25px;
+        margin-top: -10px;
+        svg {
+            width: 40px;
+            height: auto; 
         }
     }
 }
+
