@@ -1,7 +1,7 @@
 'use strict'
 
 let menu = document.getElementById('aside-menu');
-let btnOpen = document.getElementById('open-button');
+let btnOpen = document.querySelectorAll('.open-button');
 let isOpen = false;
 let header = document.getElementsByTagName('header');
 let main = document.getElementsByTagName('main');
@@ -83,10 +83,35 @@ let changeColors = () => {
 }
 
 
+let showVideo = (url) => {
+    let video = document.createElement('iframe');
+    video.className = "iframeVideo";
+    video.setAttribute("src", "https://www.youtube.com/embed/"+url+"?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1");
+    return video;
+}
+
+let validate = 0; 
+
+
 (() => {
     let initEvents = () =>  {
 
-        btnOpen.addEventListener('click', toggleMenu);
+        let inputs = document.querySelectorAll('input[type="text"]');
+        Array.from(inputs).forEach(field => {
+            field.addEventListener('focus', () => {
+                console.log(field.getAttribute('id'));
+                document.querySelector("label[for='"+field.getAttribute('id')+"']").style.color = "#FF1DBA";
+            });
+
+            field.addEventListener('blur', () => {
+                console.log(field.getAttribute('id'));
+                document.querySelector("label[for='"+field.getAttribute('id')+"']").style.color = "#FFFFFF";
+            });
+        });
+
+        Array.from(btnOpen).forEach(button => {
+        button.addEventListener('click', toggleMenu);
+        });
 
         btnClose.addEventListener('click', toggleMenu);
 
@@ -105,6 +130,36 @@ let changeColors = () => {
         window.addEventListener('scroll', () =>  {
            changeColors();
         });
+
+        let mediaquery = window.matchMedia("(min-width: 1024px)");
+        
+
+        let videos = document.querySelectorAll('span[data-video]');
+        Array.from(videos).forEach(link => {
+            link.addEventListener('mouseover', function(event) {
+                let videoID = link.getAttribute('data-video');
+                if (mediaquery.matches) {
+                    if( validate != 1 )
+                    link.appendChild(showVideo(videoID));
+                    validate = 1;
+
+                    var iframe = document.querySelector('.iframeVideo');
+                    iframe.addEventListener('mouseout', () => {
+                        iframe.remove(this);
+                        validate = 0;
+                    });
+                }
+            });
+
+            link.addEventListener('click', () => {
+                if (!mediaquery.matches) {
+                    $.fancybox.open({
+                        src: 'http://www.youtube.com/embed/'+ link.getAttribute('data-video') +'?rel=0&amp;showinfo=0;autoplay=1',
+                        type: 'iframe'
+                    });
+                }
+            });
+        });
     };
 
     let hideMenu = () => {
@@ -113,16 +168,16 @@ let changeColors = () => {
         header[0].style.opacity=1;
         main[0].style.opacity=1;
         footer[0].style.opacity=1;
-        enableScroll();
+       /* enableScroll();*/
     };
 
     let showMenu = () => {
         menu.className = 'aside-menu open';
-        isOpen = true;
+        setTimeout(function(){ isOpen = true; }, 300);
         header[0].style.opacity=0.5;
         main[0].style.opacity=0.5;
         footer[0].style.opacity=0.5;
-        disableScroll();
+        /*disableScroll();*/
     };
 
     let toggleMenu = () => {

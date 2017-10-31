@@ -38,18 +38,19 @@
             margin-bottom: 65px;
         }
         label {
-            font-family: $font2;
-            font-size: 17px;
+            font-family: $font3;
+            font-size: 15px;
             color: #fff;
             display: block;
             margin-bottom: 5px;
+            transition: all 0.5s;
         }
         input[type="text"] {
             border: none;
             padding: 6px 10px;
             border-bottom: 1px solid #ffffff;
             font-family: $font2;
-            font-size: 17px;
+            font-size: 20px;
             color: #fff;
             background: none;
             width: 100%;
@@ -65,26 +66,26 @@
             border: none;
             background: none;
             margin-top: 20px;
+            &:hover {
+                color: #FF1DBA;
+            }
         }
     }
 
 
     .bottom {
         padding: 0 0px;
-        img {
-            width: 30px;
-            height: auto;
-            &.mexico {
-                width: 45px;
-                margin-bottom: 3px;
-            }
-        }
+        
         p {
             font-family: $font3;
             font-size: 15px;
             color: #fff;
-            &.contact {
-                margin-top: 35px;
+            margin-bottom: 30px;
+            &.yellow {
+                color: #FFDB00;
+            }
+            span {
+                text-decoration: underline;
             }
         }
     }

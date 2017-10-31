@@ -68,9 +68,7 @@
 
 @media ( max-width: 992px ) {
 
-    br {
-        display: none !important;
-    }
+  
 
     .aside-menu {
         width: 100%;
@@ -93,11 +91,9 @@
     }
 
     .one {
-        .container {
-            h1 {
-                font-size: 50px;
-                line-height: 50px;
-            }
+        h1 {
+            font-size: 50px;
+            line-height: 50px;
         }
     }
 
@@ -115,12 +111,10 @@
     }
 
     .three {
-        .container {
-            h1 {
-                max-width: 100%;
-                font-size: 40px;
-                line-height: 40px;
-            }
+        h1 {
+            max-width: 100%;
+            font-size: 40px;
+            line-height: 40px;
         }
     }
 
@@ -139,9 +133,11 @@
             h1 {
                 font-size: 40px;
                 line-height: 40px;
+                text-align: center;
             }
             p {
                 font-size: 16px;
+                text-align: center;
             }
         }
     }
@@ -173,6 +169,89 @@
             float: none !important;
             margin-top: 10px;
             font-size: 12px;
+        }
+    }
+
+}
+
+
+@media ( max-width: 350px ) {
+
+    .fullSection {
+        padding: 70px 0;
+    }
+
+    .one {
+        h1 {
+            font-size: 30px;
+            line-height: 35px;
+        }
+    }
+
+
+    .two {
+        .container {
+            h1 {
+                font-size: 30px;
+                line-height: 35px;
+            }
+            p {
+                font-size: 17px;
+            }
+        }
+    }
+
+    .three {
+        h1 {
+            max-width: 100%;
+            font-size: 30px;
+            line-height: 35px;
+        }
+    }
+
+    .four {
+        .container {
+            p {
+                font-size: 18px;
+                max-width: 85%;
+            }
+        }
+    }
+
+    .five {
+        padding-bottom: 100px !important;
+        .container {
+            h1 {
+                font-size: 30px;
+                line-height: 35px;
+                text-align: center;
+            }
+            p {
+                font-size: 16px;
+                text-align: center;
+            }
+        }
+    }
+
+    footer {
+        padding: 8px 0;
+        .container {
+            text-align: center;
+        }
+        a {
+            padding: 1px 5px !important;
+            font-size: 12px !important;
+            line-height: 12px;
+            text-align: center;
+            display: inline-block;
+            float: none;
+        }
+        p {
+            display: block;
+            text-align: center;
+            float: none !important;
+            margin-top: 10px;
+            font-size: 10px;
         }
     }
 
