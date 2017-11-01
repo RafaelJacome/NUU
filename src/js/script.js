@@ -96,15 +96,37 @@ let validate = 0;
 (() => {
     let initEvents = () =>  {
 
-        let inputs = document.querySelectorAll('input[type="text"]');
+
+        let videos = document.querySelectorAll('video');
+        Array.from(videos).forEach(video => {
+            video.addEventListener('mouseover', () => {
+                if (mediaquery.matches) {
+                    video.play();
+                }
+            });
+
+            video.addEventListener('mouseout', () => {
+                video.pause();
+            });
+
+            video.addEventListener('click', () => {
+                if (!mediaquery.matches) {
+                    video.webkitEnterFullScreen();
+                    video.play();
+                }
+            });
+
+
+        });
+
+
+        let inputs = document.querySelectorAll('input[type="text"], input[type="email"]');
         Array.from(inputs).forEach(field => {
             field.addEventListener('focus', () => {
-                console.log(field.getAttribute('id'));
                 document.querySelector("label[for='"+field.getAttribute('id')+"']").style.color = "#FF1DBA";
             });
 
             field.addEventListener('blur', () => {
-                console.log(field.getAttribute('id'));
                 document.querySelector("label[for='"+field.getAttribute('id')+"']").style.color = "#FFFFFF";
             });
         });
@@ -134,32 +156,7 @@ let validate = 0;
         let mediaquery = window.matchMedia("(min-width: 1024px)");
         
 
-        let videos = document.querySelectorAll('span[data-video]');
-        Array.from(videos).forEach(link => {
-            link.addEventListener('mouseover', function(event) {
-                let videoID = link.getAttribute('data-video');
-                if (mediaquery.matches) {
-                    if( validate != 1 )
-                    link.appendChild(showVideo(videoID));
-                    validate = 1;
-
-                    var iframe = document.querySelector('.iframeVideo');
-                    iframe.addEventListener('mouseout', () => {
-                        iframe.remove(this);
-                        validate = 0;
-                    });
-                }
-            });
-
-            link.addEventListener('click', () => {
-                if (!mediaquery.matches) {
-                    $.fancybox.open({
-                        src: 'http://www.youtube.com/embed/'+ link.getAttribute('data-video') +'?rel=0&amp;showinfo=0;autoplay=1',
-                        type: 'iframe'
-                    });
-                }
-            });
-        });
+        
     };
 
     let hideMenu = () => {
@@ -189,3 +186,35 @@ let validate = 0;
 })();
 
 
+$(document).ready(()=>{
+
+    if ($(window).width() > 1024) {
+       var s = skrollr.init();
+    }
+    
+
+    $(window).on('resize', function () {
+        if ($(window).width() <= 1024) {
+        skrollr.init().destroy();
+        }
+    });
+
+    $("#form").submit(function(e) {
+        
+        
+        $.ajax({
+            type: "POST",
+            url: "http://nuu.dev/sendmail.php",
+            data: $("#form").serialize(),
+            success: function(data)
+            {
+                if(!data.success) {
+                    $(".form-fields form").empty().append("<h2>Thank you for you message.</h2>")
+                } else {
+                    $(".form-fields form").empty().append("<h2>Error.</h2>")
+                }
+            }
+            });
+        e.preventDefault(); 
+    });
+});

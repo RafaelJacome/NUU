@@ -4,6 +4,7 @@
     "src/sass/**/*.scss"
   ],
   "js": [
+    "src/vendors/skrollr.min.js",
     "src/js/**/*.js"
   ]
 }

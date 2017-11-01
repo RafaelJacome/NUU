@@ -36,6 +36,9 @@
             font-size: 30px;
             color: #fff;
             margin-bottom: 65px;
+            animation-duration: 2s !important;
+            @extend .animated;
+            @extend .fadeIn;
         }
         label {
             font-family: $font3;
@@ -45,7 +48,8 @@
             margin-bottom: 5px;
             transition: all 0.5s;
         }
-        input[type="text"] {
+        input[type="text"],
+        input[type="email"] {
             border: none;
             padding: 6px 10px;
             border-bottom: 1px solid #ffffff;

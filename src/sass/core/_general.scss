@@ -6,8 +6,7 @@
 body {
   margin: 0;
   padding: 0;
-  cursor: url(../img/eye.png), pointer;
-
+  cursor: url(../img/eye.svg), default;
   header,
   main,
   footer {
@@ -32,6 +31,6 @@ body {
 a {
   transition: all 0.3s;
   &:hover {
-    cursor: url(../img/eye-hover.png), pointer;
+    cursor: url(../img/eye.svg), pointer;
   }
 }

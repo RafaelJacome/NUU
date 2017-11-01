@@ -1,0 +1,127 @@
+.video {
+    display: inline-block;
+    position: relative;
+    &:hover {
+        z-index: 999;
+    }
+    video {
+        display: block;
+        width: 297px;
+        height: 174px;
+        transition: all 0.5s;
+         @media( min-width: 1025px ) {
+            &:hover {
+                transform: scale(3);
+                @media( max-width: 1366px ) {
+                    transform: scale(3);
+                }
+                @media( max-width: 1200px ) {
+                    transform: scale(1.7);
+                }
+            }
+         }
+         @media ( max-width: 375px ) {
+             width: 200px;
+            height: 125px;
+         }
+    }
+    i {
+        font-size: 25px;
+        margin-left: 50%;
+    }
+
+    &.full {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        background: black;
+        justify-content: center;
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+        }
+    }
+}
+
+.one {
+    .video {
+        position: absolute;
+        right: 20%;
+        bottom: 10%;
+        video {
+            transform-origin: right bottom;
+        }
+    }
+}
+
+.two {
+    position: relative;
+    .is-4 {
+        position: relative;
+        video {
+            transform-origin: left top;
+        }
+    }
+    .is-5 {
+        position: relative;
+        .video {
+            position: relative;
+            left: -100px;
+            top: 40px;
+            @media( max-width: 480px ) {
+                left: 0;
+            }
+            video {
+                transform-origin: right bottom;
+            }
+        }
+    }
+}
+
+.three {
+    .video {
+        float: right;
+        margin-right: 30%;
+        position: relative;
+        bottom: 120px;
+        @media( max-width: 1366px ) {
+            bottom: 0px;
+        }
+        video {
+            transform-origin: right bottom;
+        }
+        i {
+            float: right;
+            margin-right: 20%;
+        }
+    }
+}
+
+.four {
+    video {
+        transform-origin: left top;
+    }
+    .v2 {
+        float: right;
+        margin-right: 30%;
+        video {
+            transform-origin: right bottom;
+        }
+    }
+}
+.five {
+    .video {
+        float: right;
+        margin-right: 20%;
+        video {
+            transform-origin: center bottom;
+        }
+    }
+}

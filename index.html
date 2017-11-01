@@ -21,15 +21,15 @@
        </div>
        <div class="form-fields">
          <h2>Give us a shout.</h2>
-         <form action="">
+         <form action="sendmail.php" method="POST" id="form">
            <label for="why">What should we call you?</label>
-           <input type="text" name="why" id="why">
+           <input type="text" name="why" id="why" required>
 
            <label for="email">Email, nothing new.</label>
-           <input type="text" name="why" id="email">
+           <input type="email" name="email" id="email" required>
 
            <label for="something">Say something, anyting.</label>
-           <input type="text" name="why" id="something">
+           <input type="text" name="something" id="something" required>
 
            <input type="submit" value="Send">
          </form>
@@ -52,7 +52,7 @@
        </div>
 	</section>
   <header>
-    <div class="container">
+    <div class="">
       <a href="#" class="logo">
         <?xml version="1.0" encoding="utf-8"?>
           <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -122,9 +122,20 @@
   <main>
     <secction class="fullSection one">
       <div class="">
-        <h1>
-          we’re a Group of designers, writers, strategists, directors, producers, and developers who solve <span data-video="LAOICItn3MM">(your)</span> problems with <span data-video="N9rI8EhLomU">(our)</span> skills.
+        <h1 data-0="bottom:0px;" data-500="bottom:80px;">
+          we’re a Group of designers, writers, strategists, directors, producers, and developers who solve (your) problems with (our) skills.
         </h1>
+
+        <div class="video" data-0="bottom:0px;" data-500="bottom:180px;">
+          <video width="320" height="240" loop id="video1">
+            <source src="dist/videos/einstein_master.mp4" type="video/mp4">
+            <source src="dist/videos/ping_pong.webm" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+          <i class="fa fa-caret-up" aria-hidden="true"></i>
+        </div>
+        
+        
       </div>
     </secction>
     <secction class="fullSection two">
@@ -132,15 +143,32 @@
         <div class="columns">
           <div class="column is-1"></div>
           <div class="column is-4">
-            <p>
+            <div class="video"  data-0="left:-250px;" data-600="left:0px;">
+              <i class="fa fa-caret-down" aria-hidden="true"></i>
+              <video width="320" height="240" loop id="video1">
+                <source src="dist/videos/ping_pong.mp4" type="video/mp4">
+                <source src="dist/videos/ping_pong.webm" type="video/ogg">
+                Your browser does not support the video tag.
+              </video>
+              
+            </div>
+            <p data-0="bottom:-800px;" data-400="bottom:0px;">
               Let’s break it down—we’re a design and brand experience group that partners with people, brands and organizations to solve challenges through strategic practice in design. Our people lead the charge—a maker-mentality team that concepts and creates in combinations of innovative design, culture and brand stories.
             </p>
           </div>
           <div class="column is-1"></div>          
           <div class="column is-5">
             <h1>
-              We call it “Adventure-Hype” Kinda like Steve Irwin wearing a pair of <span data-video="LAOICItn3MM">Yeezy’s.</span>
+              We call it “Adventure-Hype” Kinda like Steve Irwin wearing a pair of Yeezy’s.
             </h1>
+            <div class="video" data-0="top:-250px;" data-800="top:40px;">
+              <video width="320" height="240" loop id="video1">
+                <source src="dist/videos/ping_pong.mp4" type="video/mp4">
+                <source src="dist/videos/ping_pong.webm" type="video/ogg">
+                Your browser does not support the video tag.
+              </video>
+              <i class="fa fa-caret-up" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="column is-1"></div>          
         </div>
@@ -148,28 +176,61 @@
     </secction>
     <secction class="fullSection three">
       <div class="">
-        <h1>
-          be bold. Stay fluid. have fun. give a shit. embrace diversity. express yourself. think. ask questions. huddle together. do meaningful work. <span data-video="LAOICItn3MM">explore</span> everything.
+        <h1 data-0="left:-350px;" data-1300="left:0px;">
+          be bold. Stay fluid. have fun. give a shit. embrace diversity. express yourself. think. ask questions. huddle together. do meaningful work. explore everything.
         </h1>
+        <div class="video" data-0="right:-350px;" data-1500="right:0px;">
+          <video width="320" height="240" loop id="video1">
+            <source src="dist/videos/ping_pong.mp4" type="video/mp4">
+            <source src="dist/videos/ping_pong.webm" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+          <i class="fa fa-caret-up" aria-hidden="true"></i>
+        </div>
       </div>
     </secction>
     <section class="fullSection four">
+      
       <div class="container">
-        <p>
-          NUU sidesteps the siloed-agency trope and promotes a non-traditional client/agency partnership. If this sounds like something you’re looking for, <span data-video="LAOICItn3MM">we would</span> love to <a href="javascript:;" class="open-button">meet</a> you.
+        <div class="video" data-0="top:-950px;" data-2700="top:0px;">
+          <video width="320" height="240" loop id="video1">
+            <source src="dist/videos/einstein_master.mp4" type="video/mp4">
+            <source src="dist/videos/ping_pong.webm" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+          <i class="fa fa-caret-up" aria-hidden="true"></i>
+        </div>
+        <p  data-0="right:-850px;" data-2400="right:0px;">
+          NUU sidesteps the siloed-agency trope and promotes a non-traditional client/agency partnership. If this sounds like something you’re looking for, we would love to <a href="javascript:;" class="open-button">meet</a> you.
         </p>
+        <div class="video v2" data-0="bottom:0%;" data-2000="bottom:40%;">
+          <video width="320" height="240" loop id="video1">
+            <source src="dist/videos/ping_pong.mp4" type="video/mp4">
+            <source src="dist/videos/ping_pong.webm" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+          <i class="fa fa-caret-up" aria-hidden="true"></i>
+        </div>
       </div>
     </section>
     <section class="fullSection five">
       <div class="container">
         <div class="columns">
           <div class="column is-8">
-            <h1>this is what we do<br>
+            <h1 data-0="left:-850px;" data-3400="left:0px;">this is what we do<br>
             (besides play<br>
             ping pong)</h1>
+            <div class="video" data-0="top:-400px;" data-3500="top:0px;">
+              <video width="320" height="240" loop id="video1">
+                <source src="dist/videos/ping_pong.mp4" type="video/mp4">
+                <source src="dist/videos/ping_pong.webm" type="video/ogg">
+                Your browser does not support the video tag.
+              </video>
+              <i class="fa fa-caret-up" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="column is-4">
-            <p>Branding<br>
+            <p  data-0="bottom:-100%;" data-2900="bottom:0%;">Branding<br>
             Visual Identity<br>
             Brand positioning<br>
             Brand strategy<br>
@@ -196,7 +257,7 @@
     </section>
   </main>
   <footer>
-    <div class="container">
+    <div class="">
       <a href="http://www.twitter.com" target="_blank">Twitter</a>
       <a href="http://www.instagram.com" target="_blank">Instagram</a>
       <a href="http://www.facebook.com" target="_blank">Facebook</a>

@@ -18,18 +18,30 @@ body {
         .fullSection {
             background: #ffffff;
         }
-        h1,p {
+        h1,p,i {
             color: #0000ff;
         }
         svg {
             fill: #000000;
+        }
+        footer {
+            a{
+                color: #000000;
+                border-right: 1px solid #000000;
+            }
+            p {
+                color:#000000;
+                i {
+                    color:#000000;
+                }
+            }
         }
     }
     &.black {
         .fullSection {
             background: #000000;
         }
-        h1,p {
+        h1,p,i {
             color: #ffffff;
         }
         svg {
@@ -49,7 +61,7 @@ body {
         .fullSection {
             background: #0000ff;
         }
-        h1,p {
+        h1,p,i {
             color: #ffffff;
         }
         svg {
@@ -70,11 +82,23 @@ body {
         .fullSection {
             background: #ffffff;
         }
-        h1,p {
-            color: #000000;
+        h1,p,i {
+            color: #0000ff;
         }
         svg {
             fill: #000000;
+        }
+        footer {
+            a{
+                color: #000000;
+                border-right: 1px solid #000000;
+            }
+            p {
+                color:#000000;
+                i {
+                    color:#000000;
+                }
+            }
         }
     }
 }
@@ -100,6 +124,7 @@ body {
         p {
             font-family: $font2;
             font-size: 25px;
+            position: relative;
         }
     }
 }
@@ -111,6 +136,7 @@ body {
         line-height: 150px;
         font-family: $font1;
         text-transform: uppercase;
+        position: relative;
     }
 }
 
@@ -122,6 +148,7 @@ body {
             max-width: 1125px;
             margin: 0 auto;
             text-align: center;
+            position: relative;
             a {
                 text-decoration: underline;
                 color: #fff;
@@ -136,14 +163,14 @@ body {
             font-size: 150px;
             line-height: 150px;
             font-family: $font1;
-            color: #0000ff;
             text-transform: uppercase;
+            position: relative;
         }
         p {
             font-size: 24px;
             font-family: $font3;
             text-align: left;
-            color: #0000ff;
+            position: relative;
             span {
                 text-decoration:line-through;
             }
