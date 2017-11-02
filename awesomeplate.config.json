@@ -4,7 +4,7 @@
     "src/sass/**/*.scss"
   ],
   "js": [
-    "src/vendors/skrollr.min.js",
+    "node_modules/paroller.js/dist/jquery.paroller.min.js",
     "src/js/**/*.js"
   ]
 }

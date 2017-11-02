@@ -188,16 +188,7 @@ let validate = 0;
 
 $(document).ready(()=>{
 
-    // if ($(window).width() > 1024) {
-    //    var s = skrollr.init();
-    // }
-    
-
-    // $(window).on('resize', function () {
-    //     if ($(window).width() <= 1024) {
-    //     skrollr.init().destroy();
-    //     }
-    // });
+    $(window).paroller();
 
     $("#form").submit(function(e) {
         

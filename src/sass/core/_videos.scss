@@ -1,6 +1,12 @@
 .video {
     display: inline-block;
     position: relative;
+    z-index: 999;
+    &.absolute {
+        position: absolute !important;
+        top: 30%;
+        left: 40%;
+    }
     &:hover {
         z-index: 999;
     }
@@ -10,24 +16,28 @@
         }
     }
     img {
-        width: 297px;
-        height: 174px;
+        width: 297px !important;
+        height: 174px !important;
         position: absolute;
-        top: -5px;
+        top: 0px;
         left: 0;
         z-index: 0;
         display: block;
+        @media ( max-width: 375px ) {
+            width: 200px !important;
+        height: 125px !important;
+        }
     }
     video {
         display: block;
-        width: 297px;
-        height: 174px;
+        width: 297px !important;
+        height: 174px !important;
         transition: all 0.5s;
         
          
          @media ( max-width: 375px ) {
-             width: 200px;
-            height: 125px;
+             width: 200px !important;
+            height: 125px !important;
          }
     }
 
@@ -49,7 +59,7 @@
          }
     i {
         font-size: 25px;
-        margin-left: 50%;
+        margin-left: 35%;
     }
 
     &.full {
