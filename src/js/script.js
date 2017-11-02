@@ -202,7 +202,7 @@ $(document).ready(()=>{
             data: $("#form").serialize(),
             success: function(data)
             {
-                if(!data.success) {
+                if(data.success) {
                     $(".form-fields form").empty().append("<h2>Thank you for you message.</h2>")
                 } else {
                     $(".form-fields form").empty().append("<h2>Error.</h2>")

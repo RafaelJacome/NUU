@@ -27,9 +27,9 @@
         z-index: 999;
         display: block;
         transition: all 0.5s;
-        @media ( max-width: 375px ) {
-            width: 200px !important;
-        height: 125px !important;
+        @media ( max-width: 480px ) {
+            width: 190px !important;
+            height: 115px !important;
         }
     }
     video {
@@ -39,9 +39,9 @@
         transition: all 0.5s;
         background-color: #000000;
          
-         @media ( max-width: 375px ) {
-             width: 200px !important;
-            height: 125px !important;
+         @media ( max-width: 480px ) {
+            width: 190px !important;
+            height: 115px !important;
          }
     }
 
