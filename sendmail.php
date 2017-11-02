@@ -24,7 +24,7 @@
 </body>
 </html>';
 $email_from = $name.'<'.$email.'>';
-$to = 'luis@nuu.co,luisd@dccolorweb.com,adher.11x2@gmail.com';
+$to = 'hello@nuu.co,luis@nuu.co';
 $subject    = 'Contact Form NUU Site';
 $headers .= 'From: '.$email_from . "\r\n";
 $headers .= "MIME-Version: 1.0"."\r\n";
