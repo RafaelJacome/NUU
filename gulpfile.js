@@ -48,6 +48,11 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('dist/fonts'));
 });
 
+gulp.task('videos', function () {
+  return gulp.src('src/videos/**/*')
+    .pipe(gulp.dest('dist/videos'));
+});
+
 gulp.task('serve', ['css', 'js'], function(){
   browserSync.init(['dist/css/*.css', 'dist/js/*.js', '*.html'],{
     server: {

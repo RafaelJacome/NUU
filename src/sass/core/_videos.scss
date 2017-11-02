@@ -23,6 +23,7 @@
         left: 0;
         z-index: 0;
         display: block;
+        transition: all 0.5s;
         @media ( max-width: 375px ) {
             width: 200px !important;
         height: 125px !important;
@@ -33,7 +34,7 @@
         width: 297px !important;
         height: 174px !important;
         transition: all 0.5s;
-        
+        background-color: #000000;
          
          @media ( max-width: 375px ) {
              width: 200px !important;
@@ -54,6 +55,13 @@
                 }
                 img {
                     opacity: 0;
+                    transform: scale(3);
+                    @media( max-width: 1366px ) {
+                        transform: scale(3);
+                    }
+                    @media( max-width: 1200px ) {
+                        transform: scale(1.7);
+                    }
                 }
             }
          }
@@ -87,7 +95,7 @@
         position: absolute;
         right: 20%;
         bottom: 10%;
-        video {
+        video, img {
             transform-origin: right bottom;
         }
     }
@@ -97,7 +105,7 @@
     position: relative;
     .is-4 {
         position: relative;
-        video {
+        video, img {
             transform-origin: left top;
         }
     }
@@ -110,7 +118,7 @@
             @media( max-width: 480px ) {
                 left: 0;
             }
-            video {
+            video, img {
                 transform-origin: right bottom;
             }
         }
@@ -126,7 +134,7 @@
         @media( max-width: 1366px ) {
             bottom: 0px;
         }
-        video {
+        video, img {
             transform-origin: right bottom;
         }
         i {
@@ -137,13 +145,13 @@
 }
 
 .four {
-    video {
+    video, img {
         transform-origin: left top;
     }
     .v2 {
         float: right;
         margin-right: 30%;
-        video {
+        video, img {
             transform-origin: right bottom;
         }
     }
@@ -152,7 +160,7 @@
     .video {
         float: right;
         margin-right: 20%;
-        video {
+        video, img {
             transform-origin: center bottom;
         }
     }
