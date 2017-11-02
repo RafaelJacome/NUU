@@ -188,16 +188,16 @@ let validate = 0;
 
 $(document).ready(()=>{
 
-    if ($(window).width() > 1024) {
-       var s = skrollr.init();
-    }
+    // if ($(window).width() > 1024) {
+    //    var s = skrollr.init();
+    // }
     
 
-    $(window).on('resize', function () {
-        if ($(window).width() <= 1024) {
-        skrollr.init().destroy();
-        }
-    });
+    // $(window).on('resize', function () {
+    //     if ($(window).width() <= 1024) {
+    //     skrollr.init().destroy();
+    //     }
+    // });
 
     $("#form").submit(function(e) {
         
