@@ -4,6 +4,7 @@
     "src/sass/**/*.scss"
   ],
   "js": [
+    "node_modules/jquery/dist/jquery.js",
     "node_modules/paroller.js/dist/jquery.paroller.min.js",
     "src/js/**/*.js"
   ]

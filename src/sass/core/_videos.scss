@@ -6,6 +6,9 @@
         position: absolute !important;
         top: 30%;
         left: 40%;
+        @media( max-width: 768px) {
+            display: none;
+        }
     }
     &:hover {
         z-index: 999;
@@ -21,7 +24,7 @@
         position: absolute;
         top: 0px;
         left: 0;
-        z-index: 0;
+        z-index: 999;
         display: block;
         transition: all 0.5s;
         @media ( max-width: 375px ) {
@@ -44,6 +47,7 @@
 
     @media( min-width: 1025px ) {
             &:hover {
+                z-index: 9999;
                 video {
                     transform: scale(3);
                     @media( max-width: 1366px ) {

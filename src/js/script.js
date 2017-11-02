@@ -96,6 +96,19 @@ let validate = 0;
 (() => {
     let initEvents = () =>  {
 
+        let mediaquery = window.matchMedia("(min-width: 1024px)");
+
+        let pictures = document.querySelectorAll('.video img');
+         Array.from(pictures).forEach(picture => { 
+             picture.addEventListener('click', () => {
+                if (!mediaquery.matches) {
+                    document.getElementById(picture.getAttribute("data-video")).play();
+                    document.getElementById(picture.getAttribute("data-video")).webkitEnterFullScreen();
+                }
+            });
+             
+         });
+
 
         let videos = document.querySelectorAll('video');
         Array.from(videos).forEach(video => {
@@ -108,14 +121,6 @@ let validate = 0;
             video.addEventListener('mouseout', () => {
                 video.pause();
             });
-
-            video.addEventListener('click', () => {
-                if (!mediaquery.matches) {
-                    video.webkitEnterFullScreen();
-                    video.play();
-                }
-            });
-
 
         });
 
@@ -152,8 +157,6 @@ let validate = 0;
         window.addEventListener('scroll', () =>  {
            changeColors();
         });
-
-        let mediaquery = window.matchMedia("(min-width: 1024px)");
         
 
         

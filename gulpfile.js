@@ -68,4 +68,4 @@ gulp.task('watch', ['serve'], function () {
   gulp.watch('./awesomeplate.config.json', [ 'css', 'js' ]);
 });
 
-gulp.task('default', ['css', 'js', 'img', 'fonts']);
+gulp.task('default', ['css', 'js', 'img', 'fonts', 'videos']);
