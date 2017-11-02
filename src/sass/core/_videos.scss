@@ -6,9 +6,6 @@
         position: absolute !important;
         top: 30%;
         left: 40%;
-        @media( max-width: 768px) {
-            display: none;
-        }
     }
     &:hover {
         z-index: 999;
@@ -24,9 +21,12 @@
         position: absolute;
         top: 0px;
         left: 0;
-        z-index: 999;
+        z-index: 0;
         display: block;
         transition: all 0.5s;
+        @media ( max-width: 991px ) {
+            z-index: 9999;
+        }
         @media ( max-width: 480px ) {
             width: 190px !important;
             height: 115px !important;
@@ -139,7 +139,7 @@
             bottom: 0px;
         }
         video, img {
-            transform-origin: right bottom;
+            transform-origin: left top;
         }
         i {
             float: right;

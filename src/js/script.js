@@ -198,7 +198,7 @@ $(document).ready(()=>{
         
         $.ajax({
             type: "POST",
-            url: "http://nuu.dev/sendmail.php",
+            url: "http://dccolorweb.com/nuu/sendmail.php",
             data: $("#form").serialize(),
             success: function(data)
             {

@@ -2,8 +2,6 @@
     $why = trim(strip_tags($_POST['why']));
     $email = trim(strip_tags($_POST['email']));
     $something = trim(strip_tags($_POST['something']));
-    header('Access-Control-Allow-Origin: *'); 
-    header('Content-Type: application/json');
 
 
     $message = '<!DOCTYPE html>
@@ -17,22 +15,17 @@
    
 </head>
 <body>
-    <b>Why</b>: '. $why .'<br>
-    <b>Email</b>: '. $email .'<br>
-    <b>Say Something</b>: '. $something .'<br>
+
     
 </body>
 </html>';
 $email_from = $name.'<'.$email.'>';
-$to = 'luis@nuu.co,luisd@dccolorweb.com,adher.11x2@gmail.com';
+$to = 'luis@nuu.co,luisd@dccolorweb.com';
 $subject    = 'Contact Form NUU Site';
 $headers .= 'From: '.$email_from . "\r\n";
 $headers .= "MIME-Version: 1.0"."\r\n";
 $headers .= "Content-type: text/html;charset=UTF-8"."\r\n";
 
 mail($to, $subject, $message, $headers);
-
- $success = [ "success" => true ];
-echo json_encode($success);
 
  ?>
