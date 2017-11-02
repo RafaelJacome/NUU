@@ -4,27 +4,49 @@
     &:hover {
         z-index: 999;
     }
+    &.toparrow {
+        img {
+            top: 25px;
+        }
+    }
+    img {
+        width: 297px;
+        height: 174px;
+        position: absolute;
+        top: -5px;
+        left: 0;
+        z-index: 0;
+        display: block;
+    }
     video {
         display: block;
         width: 297px;
         height: 174px;
         transition: all 0.5s;
-         @media( min-width: 1025px ) {
-            &:hover {
-                transform: scale(3);
-                @media( max-width: 1366px ) {
-                    transform: scale(3);
-                }
-                @media( max-width: 1200px ) {
-                    transform: scale(1.7);
-                }
-            }
-         }
+        
+         
          @media ( max-width: 375px ) {
              width: 200px;
             height: 125px;
          }
     }
+
+    @media( min-width: 1025px ) {
+            &:hover {
+                video {
+                    transform: scale(3);
+                    @media( max-width: 1366px ) {
+                        transform: scale(3);
+                    }
+                    @media( max-width: 1200px ) {
+                        transform: scale(1.7);
+                    }
+                }
+                img {
+                    opacity: 0;
+                }
+            }
+         }
     i {
         font-size: 25px;
         margin-left: 50%;
