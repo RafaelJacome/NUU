@@ -2,6 +2,17 @@
     display: inline-block;
     position: relative;
     z-index: 999;
+    &.desktop {
+        @media( max-width: 1024px ){
+            display: none;
+        }
+    }
+    &.mobil {
+        display: none;
+        @media( max-width: 1024px ){
+            display: block;
+        }
+    }
     &.absolute {
         position: absolute !important;
         top: 30%;
