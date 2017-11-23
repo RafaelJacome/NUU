@@ -48,8 +48,12 @@
             font-size: 15px;
             color: #fff;
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 0px;
             transition: all 0.5s;
+            line-height: 60px;
+            &:hover {
+                cursor: url(../img/eye.svg), default;
+            }
         }
         input[type="text"],
         input[type="email"] {
@@ -63,7 +67,11 @@
             width: 100%;
             max-width: 387px;
             display: block;
+            margin-top: -10px;
             margin-bottom: 35px;
+            &:hover {
+                cursor: url(../img/eye.svg), default;
+            }
         }
 
         input[type="submit"] {
@@ -73,6 +81,7 @@
             border: none;
             background: none;
             margin-top: 20px;
+            margin-left: -10px;
             &:hover {
                 color: #FF1DBA;
             }

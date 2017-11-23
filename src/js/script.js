@@ -203,7 +203,7 @@ $(document).ready(()=>{
             success: function(data)
             {
                 if(data.success) {
-                    $(".form-fields form").empty().append("<h2>Thank you for you message.</h2>")
+                    $(".form-fields form").empty().append("<h2>Thanks, we’ll be in touch soon.</h2>")
                 } else {
                     $(".form-fields form").empty().append("<h2>Error.</h2>")
                 }

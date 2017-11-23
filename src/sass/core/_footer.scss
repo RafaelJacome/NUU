@@ -2,7 +2,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding: 20px 20px;
+    padding: 0px 20px;
     z-index: 999;
     @media( max-width: 480px ) {
         text-align: center;
@@ -10,15 +10,22 @@ footer {
     a {
         font-family: $font3;
         font-size: 15px;
+        line-height: 60px;
         padding: 1px 15px;
-        border-right: 1px solid #000000;
         color: #000000;
         display: inline-block;
+        &:after{
+            content: " ";
+            border-right: 1px solid #000000;
+            height: 30px;
+        }
         &:first-child {
             padding-left: 0px;
         }
         &.last {
-            border-right: none !important;
+            &:after{
+                content: none !important;
+            }
         }
     }
 
@@ -26,7 +33,13 @@ footer {
         float: right;
         font-family: $font3;
         font-size: 15px;
+        line-height: 60px;
         color: #000000;
+        a {
+            &:after{
+                content: none !important;
+            }
+        }
         i {
             color: #000000;
         }
