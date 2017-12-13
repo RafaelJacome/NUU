@@ -27,8 +27,8 @@
         }
     }
     img {
-        width: 297px !important;
-        height: 174px !important;
+        width: 250px !important;
+        height: 150px !important;
         position: absolute;
         top: 0px;
         left: 0;
@@ -45,8 +45,8 @@
     }
     video {
         display: block;
-        width: 297px !important;
-        height: 174px !important;
+        width: 250px !important;
+        height: 150px !important;
         transition: all 0.5s;
          
          @media ( max-width: 480px ) {
@@ -108,7 +108,10 @@
     .video {
         position: absolute;
         right: 20%;
-        bottom: 10%;
+        bottom: 13%;
+        @media ( max-width: 1400px ) {
+            bottom: 8%;
+        }
         video, img {
             transform-origin: right bottom;
         }
@@ -123,11 +126,11 @@
             transform-origin: left top;
         }
     }
-    .is-5 {
+    .is-1 {
         position: relative;
         .video {
             position: relative;
-            left: -100px;
+            left: -150px;
             top: 40px;
             @media( max-width: 480px ) {
                 left: 0;
@@ -142,14 +145,16 @@
 .three {
     .video {
         float: right;
-        margin-right: 30%;
+        margin-right: 10%;
         position: relative;
         bottom: 120px;
+        right: -40px;
+        position: absolute;
         @media( max-width: 1366px ) {
             bottom: 0px;
         }
         video, img {
-            transform-origin: left top;
+            transform-origin: right top;
         }
         i {
             float: right;
@@ -163,8 +168,8 @@
         transform-origin: left top;
     }
     .v2 {
-        float: right;
-        margin-right: 30%;
+        float: left;
+        margin-left: 30%;
         video, img {
             transform-origin: right bottom;
         }
@@ -172,8 +177,16 @@
 }
 .five {
     .video {
-        float: right;
-        margin-right: 20%;
+        right: 40%;
+        position: absolute;
+        bottom: 10% !important;
+        @media( max-width: 1400px ) {
+            bottom: -15% !important;
+        }
+
+        @media( max-width: 480px ) {
+            bottom: 60% !important;
+        }
         video, img {
             transform-origin: center center;
         }
